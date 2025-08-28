@@ -46,7 +46,7 @@ st.markdown("""
 # Função para carregar dados
 @st.cache_data
 def load_data():
-    df = pd.read_csv('/home/ubuntu/marketing_data.csv')
+    df = pd.read_csv("marketing_data.csv")
     df['Data'] = pd.to_datetime(df['Data'])
     return df
 
