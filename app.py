@@ -20,25 +20,51 @@ st.set_page_config(
 st.markdown("""
 <style>
     .main {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%); /* Gradiente mais escuro e dramático */
     }
     .stMetric {
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.08); /* Mais translúcido */
+        border-radius: 15px; /* Bordas mais arredondadas */
+        padding: 20px; /* Mais espaçamento interno */
+        backdrop-filter: blur(15px); /* Efeito de blur mais forte */
+        border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Sombra para profundidade */
+    }
+    .stSelectbox > div > div,
+    .stTextInput > div > div {
+        background: rgba(255, 255, 255, 0.05); /* Mais translúcido */
         border-radius: 10px;
-        padding: 10px;
-        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
+        color: white; /* Texto branco para inputs */
     }
-    .stSelectbox > div > div {
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 5px;
+    .stSelectbox > div > div > div > div {
+        color: white; /* Cor do texto selecionado */
     }
-    h1, h2, h3 {
-        color: white;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    h1, h2, h3, h4, h5, h6 {
+        color: #00f2fe; /* Cor ciano vibrante para títulos */
+        text-shadow: 0 0 10px rgba(0, 242, 254, 0.7); /* Brilho neon */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
     }
     .stDataFrame {
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.05); /* Mais translúcido */
         border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
+    }
+    .stMarkdown p, .stMarkdown li {
+        color: rgba(255, 255, 255, 0.8); /* Texto geral mais claro */
+    }
+    .stButton > button {
+        background: linear-gradient(45deg, #00f2fe 0%, #4facfe 100%); /* Gradiente nos botões */
+        color: white;
+        border-radius: 8px;
+        border: none;
+        padding: 10px 20px;
+        box-shadow: 0 4px 15px 0 rgba(0, 242, 254, 0.4);
+        transition: all 0.3s ease;
+    }
+    .stButton > button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px 0 rgba(0, 242, 254, 0.6);
     }
 </style>
 """, unsafe_allow_html=True)
@@ -265,4 +291,6 @@ with col3:
 # Footer
 st.markdown("---")
 st.markdown("### 🔮 Dashboard criado com tecnologia futurista para análise de marketing")
+
+
 
